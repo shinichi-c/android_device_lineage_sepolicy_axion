@@ -1,5 +1,11 @@
 genfscon proc /sys/vm/dirty_background_bytes u:object_r:proc_dirty:s0
 genfscon proc /sys/vm/dirty_bytes u:object_r:proc_dirty:s0
+genfscon proc /sys/vm/extfrag_threshold u:object_r:proc_drop_caches:s0
+genfscon proc /sys/vm/page_lock_unfairness u:object_r:proc_drop_caches:s0
+
+genfscon sysfs /kernel/mm/transparent_hugepage/enabled u:object_r:sysfs_transparent_hugepage:s0
+genfscon sysfs /kernel/mm/transparent_hugepage/khugepaged/defrag u:object_r:sysfs_transparent_hugepage:s0
+
 genfscon sysfs /devices/virtual/timed_output/vibrator u:object_r:sysfs_vibrator:s0
 genfscon sysfs /module/mmcblk/parameters/perdev_minors u:object_r:sysfs_perdev_minors:s0
 
